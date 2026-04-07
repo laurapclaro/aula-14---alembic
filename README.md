@@ -1,5 +1,5 @@
 #Configurar alembic
-
+#pip install alembic
 #Inicializar o alembic
 
 #No terminal:
