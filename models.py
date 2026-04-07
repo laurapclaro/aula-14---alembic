@@ -4,7 +4,7 @@ from sqlalchemy.orm import declarative_base, sessionmaker, relationship
 
 Base = declarative_base()
 
-engine = create_engine("sqlite:\\\escola.db")
+engine = create_engine("sqlite:///escola.db")
 
 Session = sessionmaker(bind=engine)
 
@@ -15,6 +15,7 @@ class Curso(Base):
     id = Column(Integer, primary_key=True, autoincrement=True)
     nome = Column(String(100), nullable=False)
     carga_horaria = Column(Integer, nullable=False)
+    descricao = Column(String(150))
 
     alunos = relationship("Aluno", back_populates="cursos")
 
